@@ -3,7 +3,7 @@
 void    *ft_calloc(size_t count, size_t size)
 {
     void    *retval;
-    int     *temp;
+    char     *temp;
 
     retval = malloc(size * count);
     if (retval != NULL)
