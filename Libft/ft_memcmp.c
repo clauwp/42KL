@@ -19,8 +19,9 @@ int	ft_memcmp(void *s1, void *s2, int n)
 	copy2 = s2;
 	while (n > 0)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
+		if (*copy1 != *copy2)
+			return ((int*) s1 - (int*) s2);
 		n--;
 	}
+	return (0);
 }

@@ -12,10 +12,13 @@
 
 void	ft_bzero(void *s, int n)
 {
+	unsigned char *copys;
+
+	copys = (unsigned char*) s;
 	while (n > 0)
 	{
-		*s = 0;
-		s++;
+		copys = 0;
+		copys++;
 		n--;
 	}
 }

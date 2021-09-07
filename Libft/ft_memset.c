@@ -1,11 +1,11 @@
 void	*ft_memset(void *s, int c, int n)
 {
-	void	*copy;
+	unsigned char	*copy;
 
 	copy = s;
 	while (n > 0)
 	{
-		*copy = c;
+		*copy = (unsigned char) c;
 		copy--;
 		n--;
 	}

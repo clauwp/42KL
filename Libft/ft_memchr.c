@@ -1,10 +1,13 @@
 int	ft_memchr(void *str, int c, int n)
 {
-	while (n > 0 && *str)
+	unsigned char *copystr;
+
+	copystr = str;
+	while (n > 0 && *copystr)
 	{
-		if (c == *str)
-			return (str);
+		if (c == *copystr)
+			return (copystr);
 		n--;
-		str++;
+		copystr++;
 	}
 }
