@@ -1,4 +1,4 @@
-char	*ft_strrchr(char *str, char c)
+char	*ft_strrchr(const char *str, int c)
 {
 	int	count;
 

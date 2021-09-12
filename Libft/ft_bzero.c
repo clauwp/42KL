@@ -9,16 +9,15 @@
 /*   Updated: 2021/09/07 13:34:10 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-void	ft_bzero(void *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char *copys;
 
-	copys = (unsigned char*) s;
-	while (n > 0)
+	*copys = (unsigned char*) s;
+	while (n-- > 0)
 	{
-		copys = 0;
-		copys++;
-		n--;
+		*copys++ = 0;
 	}
 }

@@ -1,4 +1,4 @@
-char	*ft_strchr(char *str, char c)
+char	*ft_strchr(const char *str, int c)
 {
 	if (c = 0)
 		return (c);

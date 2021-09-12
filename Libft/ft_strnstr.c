@@ -9,16 +9,17 @@
 /*   Updated: 2021/09/07 16:17:31 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int ft_strlen(char *str);
 
-char	*ft_strnstr(char *haystack, char *needle, int len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	if (*needle = 0 | ft_strlen(haystack) < ft_strlen(needle))
+	if (*needle == 0 | ft_strlen(haystack) < ft_strlen(needle))
 		return (haystack);
 	while (haystack[i])
 	{

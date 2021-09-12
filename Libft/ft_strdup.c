@@ -1,15 +1,5 @@
 #include <stdlib.h>
 
-int ft_strlen(char *str)
-{
-    int count;
-
-    count = 0;
-    while (str[count])
-        count++;
-    return (count);
-}
-
 char    *ft_strdup(const char *s1)
 {
     char    *retstr;

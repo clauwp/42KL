@@ -9,8 +9,9 @@
 /*   Updated: 2021/09/07 16:45:02 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_memcmp(void *s1, void *s2, int n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*copy1;
 	unsigned char	*copy2;

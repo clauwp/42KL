@@ -1,13 +1,16 @@
-int	ft_memchr(void *str, int c, int n)
+#include "libft.h"
+
+void	*ft_memchr(const void *str, int c, size_t n)
 {
 	unsigned char *copystr;
 
 	copystr = str;
 	while (n > 0 && *copystr)
 	{
-		if (c == *copystr)
+		if ((unsigned char) c == *copystr)
 			return (copystr);
 		n--;
 		copystr++;
 	}
+	return (NULL);
 }
