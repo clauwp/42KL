@@ -1,9 +1,0 @@
-Credentials cache: API:652CFA75-F249-420F-AC48-EA59E41E2805
-
-        Principal: clau@42KL.EDU.MY
-
-
-
-  Issued                Expires               Principal
-
-Jul 27 01:11:20 2021  Jul 27 11:11:11 2021  krbtgt/42KL.EDU.MY@42KL.EDU.MY
