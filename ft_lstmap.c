@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/21 15:59:02 by clau              #+#    #+#             */
+/*   Updated: 2021/09/21 15:59:04 by clau             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new
 list resulting of the successive applications of the function ’f’. The ’del’ function is used to

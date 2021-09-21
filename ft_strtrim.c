@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/21 15:56:52 by clau              #+#    #+#             */
+/*   Updated: 2021/09/21 15:56:54 by clau             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified
 in "set" removed from the beginning and the end of the string.

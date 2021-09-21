@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 16:39:04 by clau              #+#    #+#             */
-/*   Updated: 2021/09/07 16:45:02 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/21 16:02:48 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (*copy1 != *copy2 || *copy1 == 0 || *copy2 == 0)
 			return (*copy1- *copy2);
+		copy1++;
+		copy2++;
 		n--;
 	}
 	return (0);
