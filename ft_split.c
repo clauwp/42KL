@@ -6,13 +6,12 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 09:39:59 by clau              #+#    #+#             */
-/*   Updated: 2021/09/22 10:50:39 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/23 15:10:59 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 static char	*ft_strnew(char *start, char *end);
 

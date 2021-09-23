@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 16:03:19 by clau              #+#    #+#             */
-/*   Updated: 2021/09/22 15:35:04 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/23 15:18:39 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	tempdst = (char *)dst;
 	tempsrc = (char *)src;
 	count = 0;
-	if (dst == (void *) 0 && src ==(void *)0)
+	if (dst == (void *) 0 && src == (void *)0)
 		return (NULL);
 	while (count < n)
 	{
 		if (&tempsrc[count] == tempdst)
-			break;
+			break ;
 		count++;
 	}
 	while (n > count)
