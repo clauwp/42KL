@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:57:03 by clau              #+#    #+#             */
-/*   Updated: 2021/09/23 15:10:18 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/23 15:34:10 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *str, int c)
 	len = ft_strlen(str);
 	while (len >= 0)
 	{
-		if (str[len] == c)
+		if (str[len] == (char) c)
 			return ((char *) &str[len]);
 		len--;
 	}
