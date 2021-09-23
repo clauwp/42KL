@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 16:03:01 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 16:03:10 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/21 22:12:53 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 		n--;
 		copystr++;
 	}
+	if (c == 0 && *copystr == 0)
+		return (copystr);
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:58:53 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 15:58:54 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/22 09:50:54 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,14 @@ Parameter: first element of list
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next != NULL)
+	if (lst != NULL)
 	{
-		lst = lst->next;
+		while (lst->next != NULL)
+		{
+			lst = lst->next;
+		}
+		return (lst);
 	}
-	return (lst);
+	else
+		return (NULL);
 }

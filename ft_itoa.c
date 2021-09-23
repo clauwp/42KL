@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 16:00:41 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 16:00:42 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/22 09:24:30 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ static int	ft_findlen(int n)
 {
 	int	count;
 
-	count = 0;
+	if (n == 0)
+		count = 1;
+	else
+		count = 0;
 	while (n != 0)
 	{
 		n = n / 10;
@@ -37,9 +40,9 @@ char	*ft_itoa(int n)
 	int		len;
 
 	len = ft_findlen(n);
-	if (n > 0)
+	if (n >= 0)
 		len--;
-	retstr = (char *)malloc(sizeof(*retstr) * (len + 1));
+	retstr = (char *)malloc(sizeof(*retstr) * (len + 2));
 	if (retstr != NULL)
 	{
 		if (n < 0)

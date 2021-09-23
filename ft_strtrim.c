@@ -6,12 +6,13 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:56:52 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 15:56:54 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/22 10:31:39 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified
+Allocates (with malloc(3)) and returns
+a copy of ’s1’ with the characters specified
 in "set" removed from the beginning and the end of the string.
 Parameter:
 1. string to trim
@@ -21,28 +22,46 @@ Parameter:
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strtrim(char const *s1, const char *set)
+static int	ft_totrim(const char *str, char c);
+
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*retstr;
 	char	*start;
 	char	*end;
 	int		i;
 
-	while (ft_strchr(set, *s1) != 0)
+	while (ft_totrim(set, *s1) != 0)
 		s1++;
 	start = (char *) s1;
-	while (*s1)
+	while (*s1 != 0)
 		s1++;
-	while ((ft_strchr(set, *s1) != 0 && s1 != start) || *s1 == 0)
+	while ((ft_totrim(set, *s1) != 0 && s1 != start) || *s1 == 0)
 		s1--;
 	end = (char *) s1;
 	i = 0;
-	while (&start[i] != end)
+	while (&start[i] <= end)
 		i++;
-	retstr = (char *)malloc(sizeof(char) * (i + 2));
-	i = 0;
-	while (start <= end)
-		retstr[i++] = *start++;
-	retstr[i] = 0;
-	return (retstr);
+	retstr = (char *)malloc(sizeof(char) * (i + 1));
+	if (retstr != NULL)
+	{
+		i = 0;
+		while (start <= end)
+			retstr[i++] = *start++;
+		retstr[i] = 0;
+		return (retstr);
+	}
+	else
+		return (NULL);
+}
+
+static int	ft_totrim(const char *str, char c)
+{
+	while (*str)
+	{
+		if (*str == c)
+			return (1);
+		str++;
+	}
+	return (0);
 }

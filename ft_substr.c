@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/21 22:46:10 by clau              #+#    #+#             */
+/*   Updated: 2021/09/22 09:55:36 by clau             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 Allocates (with malloc(3)) and returns a substring from the string ’s’.
 The substring begins at index "start" and is of maximum size ’len’.
@@ -20,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (retstr != NULL)
 	{
 		copyretstr = retstr;
-		while (start-- > 0)
+		while (start-- > 0 && *s != 0)
 			s++;
 		while (len-- > 0 && *s)
 			*copyretstr++ = *s++;

@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:58:18 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 15:58:20 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/22 01:22:40 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		next_list = current_list->next;
 		ft_lstdelone(current_list, del);
-		free(current_list);
 		current_list = next_list;
 	}
 	*lst = NULL;

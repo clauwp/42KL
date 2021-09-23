@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:58:45 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 15:58:47 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/21 16:13:33 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	while (lst)
 	{
 		f(lst->content);
-		lst = lst->next;	
+		lst = lst->next;
 	}
 }

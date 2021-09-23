@@ -6,13 +6,13 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 16:18:22 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 16:06:44 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/21 16:15:30 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int  ft_overflow(int n1, int n2);
+static int	ft_overflow(int n1, int n2);
 
 int	ft_atoi(const char *str)
 {
@@ -42,14 +42,14 @@ int	ft_atoi(const char *str)
 
 static int	ft_overflow(int n1, int n2)
 {
-		int	sum;
+	int	sum;
 
-		if ((n1 > 0 && n1 * 10 < 0) || (n1 < 0 && n1 * 10 > 0))
-			return (1);
-		sum = (n1 * 10) + n2;
-		if (n1 > 0 && n2 > 0 && sum < 0)
-			return (1);
-		else if (n1 < 0 && n2 < 0 && sum > 0)
-			return (1);
-		return (0);
+	if ((n1 > 0 && n1 * 10 < 0) || (n1 < 0 && n1 * 10 > 0))
+		return (1);
+	sum = (n1 * 10) + n2;
+	if (n1 > 0 && n2 > 0 && sum < 0)
+		return (1);
+	else if (n1 < 0 && n2 < 0 && sum > 0)
+		return (1);
+	return (0);
 }

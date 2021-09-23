@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/22 09:39:59 by clau              #+#    #+#             */
+/*   Updated: 2021/09/22 10:50:39 by clau             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -15,7 +27,7 @@ char	**ft_split(const char *s, char c)
 	if (retarray != NULL)
 	{
 		len = 0;
-		while (*s)
+		while (*s != 0)
 		{
 			start = (char *) s;
 			while (*s != c && *s)
@@ -25,6 +37,7 @@ char	**ft_split(const char *s, char c)
 				retarray[len++] = ft_strnew(start, end);
 			s++;
 		}
+		retarray[len] = 0;
 		return (retarray);
 	}
 	else

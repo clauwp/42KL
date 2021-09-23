@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:58:36 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 15:58:38 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/22 01:19:20 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ Parameter:
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
-	free(lst->content);
+	free(lst);
 }

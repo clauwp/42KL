@@ -10,8 +10,8 @@ typedef	struct s_list
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
 char	**ft_split(const char *s, char c);
-char	ft_toupper(int c);
-char	ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
