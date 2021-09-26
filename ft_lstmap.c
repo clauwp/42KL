@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:59:02 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 16:13:06 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/26 22:10:46 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,15 @@ Return: The new list. NULL if the allocation fails
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*retlist;
-	t_list	*copy_list;
 
-	retlist = (t_list *)malloc(sizeof(t_list) * ft_lstsize(lst));
-	if (retlist != NULL)
+	while (lst)
 	{
-		copy_list = retlist;
-		while (lst)
-		{
-			retlist = ft_lstnew(f(lst->content));
-			if (retlist->content != NULL)
-				retlist->next = lst->next;
-			else
-				ft_lstclear(&copy_list, del);
-			lst = lst->next;
-		}
-		return (copy_list);
+		retlist = ft_lstnew(f(lst->content));
+		if (retlist->content != NULL)
+			retlist->next = lst->next;
+		else
+			ft_lstclear(&retlist, del);
+		lst = lst->next;
 	}
-	else
-		return (NULL);
+	return (retlist);
 }

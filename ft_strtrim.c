@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:56:52 by clau              #+#    #+#             */
-/*   Updated: 2021/09/23 15:26:06 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/26 20:01:59 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	char	*retstr;
 	char	*start;
 	char	*end;
-	int		i;
+	size_t	size;
 
-	i = 0;
-	retstr = (char *)malloc(sizeof(char) * ft_strlen(s1));
 	while (ft_totrim(set, *s1) != 0)
 		s1++;
 	start = (char *) s1;
@@ -41,12 +39,14 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while ((ft_totrim(set, *s1) != 0 && s1 != start) || *s1 == 0)
 		s1--;
 	end = (char *) s1;
+	if (start <= end)
+		size = end - start + 2;
+	else
+		size = 1;
+	retstr = (char *)malloc(sizeof(char) * size);
 	if (retstr != NULL)
 	{
-		i = 0;
-		while (start <= end)
-			retstr[i++] = *start++;
-		retstr[i] = 0;
+		ft_strlcpy(retstr, start, size);
 		return (retstr);
 	}
 	else

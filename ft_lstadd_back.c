@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:58:00 by clau              #+#    #+#             */
-/*   Updated: 2021/09/21 15:58:03 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/26 21:19:50 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,14 @@ Parameter:
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while ((*lst)->next)
+	if (*lst == NULL)
+		(*lst) = new;
+	else
 	{
-		*lst = (*lst)->next;
+		while ((*lst)->next != NULL)
+		{
+			lst = &((*lst)->next);
+		}
+		(*lst)->next = new;
 	}
-	(*lst)->next = new;
 }

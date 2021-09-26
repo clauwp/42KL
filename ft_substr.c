@@ -6,7 +6,7 @@
 /*   By: clau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 22:46:10 by clau              #+#    #+#             */
-/*   Updated: 2021/09/22 09:55:36 by clau             ###   ########.fr       */
+/*   Updated: 2021/09/25 21:37:38 by clau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,15 @@ Parameter:
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*retstr;
-	char	*copyretstr;
+	char			*retstr;
+	char			*copyretstr;
+	unsigned int	len_retstr;
 
-	retstr = (char *)malloc(sizeof(char) * (len + 1));
+	if (start >= ft_strlen(s))
+		len_retstr = 0;
+	else
+		len_retstr = ft_strlen(s) - start + 1;
+	retstr = (char *)malloc(sizeof(char) * (len_retstr + 1));
 	if (retstr != NULL)
 	{
 		copyretstr = retstr;

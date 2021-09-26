@@ -47,7 +47,7 @@ CFLAGS = -Wall -Wextra -Werror -I .
 CC = gcc
 NAME = libft.a
 
-${NAME} : ${OBJS}
+${NAME}: ${OBJS}
 	ar rc ${NAME} ${OBJS}	
 
 ${BONUS_OBJS} : ${BONUS}
